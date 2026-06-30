@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Blog con Más Esencia | Sebastián Acuña Díaz</title>
+  <link rel="stylesheet" href="Estilo_Esencia.css">
+</head>
+<body class="modo-claro">
+
+  <header>
+    <nav class="barra-navegacion">
+      <div class="logo">Sebas.dev <span class="badge-esencia">Nivel Saiyayin</span></div>
+      <ul class="enlaces">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#juego">Juego</a></li>
+        <li><a href="#multimedia">Multimedia</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="botones-derecha">
+        <button id="boton-oscuro">🌙</button>
+        <button id="boton-musica">🔇</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="seccion-presentacion">
+      <div class="texto-presentacion">
+        <p class="esencia-dialogo">"Bienvenido al Blog con mas esencia de todas, nadie iguala este nivel de esencia"</p>
+        <p id="mensaje-saludo" class="saludo">¡Hola!</p>
+        <h1>Soy Sebastián</h1>
+        <p>Estudiante de Ingeniería · UCSC · Me gusta los pinguinos 🐧</p>
+        <p class="contador">Llevas <span id="tiempo-pagina">0</span> segundos aquí.</p>
+      </div>
+      <div class="foto-presentacion">
+        <img src="assets/img/avatar.jpg" alt="Foto de Sebastián con su Ki">
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="seccion-azul-saiyayin">
+      <h2>Sobre mí</h2>
+      <div class="caja-sobre-mi">
+        <p>Soy <strong>Sebastián Acuña Díaz</strong>, tengo 19 años y estudio en la <strong>UCSC</strong>. Me gusta mucho jugar y por momentos programar, aunque siento que soy mejor en bases de datos pero meee, Aun asi me encanta aprender cosas nuevas.</p>
+        <p>Mis pasatiempos son ir al gimnasio temprano por las mañanas, andar en bicicleta y escuchar música. Y no esta de más los pinguinos 🐧.</p>
+      </div>
+    </section>
+
+    <section id="habilidades" class="seccion-blanca">
+      <h2>Mis Habilidades</h2>
+      <div class="contenedor-habilidades">
+        
+        <div class="foto-laboratorio">
+          <img src="assets/img/foto-lab.jpg" alt="Entrenando Ki en la UCSC">
+          <p>Practicando en la U 💻</p>
+        </div>
+
+        <div class="tarjetas">
+          <div class="tarjeta-giratoria">
+            <div class="adentro">
+              <div class="frente border-azul">
+                <h3>HTML5</h3>
+              </div>
+              <div class="atras bg-naranja-saiyayin">
+                <p>Uso de etiquetas semánticas, creación de formularios y estructura de la página.</p>
+              </div>
+            </div>
+          </div>
+          <div class="tarjeta-giratoria">
+            <div class="adentro">
+              <div class="frente border-azul">
+                <h3>CSS3</h3>
+              </div>
+              <div class="atras bg-naranja-saiyayin">
+                <p>Diseño de páginas, colores, flexbox básico y efectos hover.</p>
+              </div>
+            </div>
+          </div>
+          <div class="tarjeta-giratoria">
+            <div class="adentro">
+              <div class="frente border-azul">
+                <h3>Gemini Pro</h3>
+              </div>
+              <div class="atras bg-naranja-saiyayin">
+                <p>Uso de Inteligencia Artificial para apoyar el desarrollo de código.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="blog" class="seccion-azul-saiyayin">
+      <h2>Mi Blog (Nivel  de Esencia)</h2>
+      <div class="contenedor-blog">
+        <article class="articulo">
+          <h3>La vida universitaria y el Kisaso</h3>
+          <p>Ir al gimnasio temprano me ayuda mucho segun yo a sentirme mas fresco en el dia, aunque en las tardes me muera de sueño. Levantarme temprano en si es un gran desafío, pero me hace sentir más energético durante el día.</p>
+          <small>30 de junio, 2026</small>
+        </article>
+        
+        <article class="articulo">
+          <h3>Música, Código y Mi novia</h3>
+          <p>No puedo estudiar sin musica es algo de lo cual me acostumbre, Me entretengo por momentos programando ademas que siempre cuento con la compañia de mi novia que esta ahi para ayudarme a no perder el foco</p>
+          <small>30 de mayo, 2026</small>
+        </article>
+      </div>
+    </section>
+
+    <section id="juego" class="seccion-blanca">
+      <h2>Minijuego: Tres en línea Saiyayin con Fokin Esencia</h2>
+      <p>¡Intenta ganarle a la computadora!</p>
+      
+      <div class="marcador">
+        <p>Jugador (X): <span id="puntos-jugador">0</span> | CPU (O): <span id="puntos-cpu">0</span></p>
+      </div>
+
+      <div id="tablero-juego">
+        <div class="casilla" id="c0"></div>
+        <div class="casilla" id="c1"></div>
+        <div class="casilla" id="c2"></div>
+        <div class="casilla" id="c3"></div>
+        <div class="casilla" id="c4"></div>
+        <div class="casilla" id="c5"></div>
+        <div class="casilla" id="c6"></div>
+        <div class="casilla" id="c7"></div>
+        <div class="casilla" id="c8"></div>
+      </div>
+      
+      <button id="boton-reiniciar" class="boton-azul-saiyayin">Reiniciar Batalla</button>
+    </section>
+
+    <section id="multimedia" class="seccion-azul-saiyayin">
+      <h2>Multimedia (La Esencia del AMV)</h2>
+      <div class="contenedor-multimedia">
+        
+        <div class="caja-media">
+          <h3>🎵 Bring Me To Life [AMV Remake]</h3>
+          <audio id="musica-fondo" loop>
+            <source src="assets/audio/bring_me_to_life.mp3" type="audio/mpeg">
+          </audio>
+          <p>La canción que me enviaste está enlazada. ¡Usa el botón de arriba 🔇/🔊 para escucharla!</p>
+        </div>
+
+        <div class="caja-media">
+          <h3>📺 Video Recomendado</h3>
+          <iframe width="100%" height="250" src="https://www.youtube.com/embed/fXhzLZxe9HQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contacto" class="seccion-blanca">
+      <h2>Contáctame (Esencia Saiyayin)</h2>
+      <form id="formulario-contacto">
+        <div class="grupo-formulario">
+          <label>Nombre:</label>
+          <input type="text" id="campo-nombre" placeholder="Escribe tu nombre">
+        </div>
+        
+        <div class="grupo-formulario">
+          <label>Correo:</label>
+          <input type="email" id="campo-correo" placeholder="ejemplo@correo.com">
+        </div>
+
+        <div class="grupo-formulario">
+          <label>Mensaje:</label>
+          <textarea id="campo-mensaje" rows="4" placeholder="Escribe tu mensaje aquí"></textarea>
+        </div>
+        
+        <button type="submit" class="boton-enviar boton-naranja-saiyayin">Enviar Mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Sebastián Acuña Díaz - Proyecto Frontend UCSC 🐧 <span class="esencia-footer">Pura Esencia</span></p>
+  </footer>
+
+  <script src="Esencia_Good.js"></script>
+</body>
+</html>
