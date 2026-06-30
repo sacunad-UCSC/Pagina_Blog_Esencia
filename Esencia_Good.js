@@ -1,6 +1,6 @@
-// ==========================================
+
 // 1. SALUDO DEPENDIENDO DE LA HORA
-// ==========================================
+
 let fechaActual = new Date();
 let horaActual = fechaActual.getHours();
 let textoSaludo = document.getElementById("mensaje-saludo");
@@ -13,9 +13,9 @@ if (horaActual < 12) {
     textoSaludo.innerHTML = "¡Buenas noches! 🌙";
 }
 
-// ==========================================
+
 // 2. CRONÓMETRO DE VISITA
-// ==========================================
+
 let segundos = 0;
 // Esto se repite cada 1000 milisegundos (1 segundo)
 setInterval(function() {
@@ -40,28 +40,27 @@ botonOscuro.onclick = function() {
 };
 
 // ==========================================
-// 4. MÚSICA DE FONDO (¡CORREGIDO!)
+// 4. MÚSICA DE FONDO 
 // ==========================================
 let botonMusica = document.getElementById("boton-musica");
 let audioFondo = document.getElementById("musica-fondo");
 let estaSonando = false;
 
-// CORRECCIÓN: El botón ahora controla la música correctamente
+
 botonMusica.onclick = function() {
     if (estaSonando === false) {
-        audioFondo.play(); // Reproducir la canción
-        botonMusica.innerHTML = "🔊"; // Icono de sonido
+        audioFondo.play(); 
+        botonMusica.innerHTML = "🔊"; 
         estaSonando = true;
     } else {
         audioFondo.pause(); // Pausar la canción
-        botonMusica.innerHTML = "🔇"; // Icono de silencio
+        botonMusica.innerHTML = "🔇"; 
         estaSonando = false;
     }
 };
 
-// ==========================================
 // 5. VALIDACIÓN DEL FORMULARIO CON ALERTS
-// ==========================================
+
 let formulario = document.getElementById("formulario-contacto");
 
 formulario.onsubmit = function(evento) {
@@ -85,14 +84,13 @@ formulario.onsubmit = function(evento) {
 };
 
 // ==========================================
-// 6. MINIJUEGO: TRES EN LÍNEA BÁSICO (Mejorado con Ki)
+// 6. MINIJUEGO: TRES EN LÍNEA BÁSICO 
 // ==========================================
 let casillas = document.getElementsByClassName("casilla");
 let juegoTerminado = false;
 let puntosJugador = 0;
 let puntosCpu = 0;
 
-// Le agrego un clic a las 9 casillas usando un ciclo for
 for (let i = 0; i < casillas.length; i++) {
     casillas[i].onclick = function() {
         // Solo marcar si esta vacia y el juego no ha terminado
