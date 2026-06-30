@@ -23,9 +23,9 @@ setInterval(function() {
     document.getElementById("tiempo-pagina").innerHTML = segundos;
 }, 1000);
 
-// ==========================================
-// 3. MODO OSCURO (CAMBIO DE CLASE)
-// ==========================================
+
+// 3. MODO OSCURO 
+
 let botonOscuro = document.getElementById("boton-oscuro");
 
 botonOscuro.onclick = function() {
@@ -39,25 +39,25 @@ botonOscuro.onclick = function() {
     }
 };
 
-// ==========================================
-// 4. MÚSICA DE FONDO 
-// ==========================================
+// 4. MÚSICA DE FONDO
+
 let botonMusica = document.getElementById("boton-musica");
 let audioFondo = document.getElementById("musica-fondo");
 let estaSonando = false;
 
-
+// CORRECCIÓN: El botón ahora controla la música correctamente
 botonMusica.onclick = function() {
     if (estaSonando === false) {
-        audioFondo.play(); 
-        botonMusica.innerHTML = "🔊"; 
+        audioFondo.play(); // Reproducir la canción
+        botonMusica.innerHTML = "🔊"; // Icono de sonido
         estaSonando = true;
     } else {
         audioFondo.pause(); // Pausar la canción
-        botonMusica.innerHTML = "🔇"; 
+        botonMusica.innerHTML = "🔇"; // Icono de silencio
         estaSonando = false;
     }
 };
+
 
 // 5. VALIDACIÓN DEL FORMULARIO CON ALERTS
 
@@ -83,9 +83,9 @@ formulario.onsubmit = function(evento) {
     }
 };
 
-// ==========================================
+
 // 6. MINIJUEGO: TRES EN LÍNEA BÁSICO 
-// ==========================================
+
 let casillas = document.getElementsByClassName("casilla");
 let juegoTerminado = false;
 let puntosJugador = 0;
@@ -97,7 +97,7 @@ for (let i = 0; i < casillas.length; i++) {
         if (casillas[i].innerHTML === "" && juegoTerminado === false) {
             casillas[i].innerHTML = "X";
             casillas[i].classList.add("x"); // Estilo Oro Esencia en CSS
-            
+            casillas[i].disabled = true; // Desactivar la casilla
             verificarGanador();
             
             // Si el jugador no ganó con esa jugada, le toca a la CPU

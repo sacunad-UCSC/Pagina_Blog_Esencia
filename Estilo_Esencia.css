@@ -1,4 +1,4 @@
-/* Estilos básicos universales con Colores Saiyayin */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,36 +6,39 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Colores de la paleta Saiyayin (Inspirado en Vegeta) */
-/* Azul Vegeta: #0057b7 */
-/* Amarillo/Oro Armor: #ffd700 */
-/* Naranja Saiyayin: #e03e00 */
-/* Blanco Armor: #ffffff */
-/* Texto: #333333 */
+:root {
+  --primario: #448bab;
+  --secundario: #f4a261;
+  --secundario-oscuro: #d9824c;
+  --fondo: #f7fbfc;
+  --superficie: #ffffff;
+  --texto: #234b58;
+  --texto-claro: #f4fbfd;
+}
 
 body.modo-claro {
-  background-color: #ffffff; /* Blanco armor */
-  color: #333333;
+  background-color: var(--fondo);
+  color: var(--texto);
 }
 
 body.modo-oscuro {
-  background-color: #1a1a1a;
-  color: #f5f5f5;
+  background-color: #23353b;
+  color: var(--texto-claro);
 }
 
-/* Menú de navegación*/
+/* Menú de navegación (Ki Saiyayin) */
 header {
-  background-color: #0057b7; 
+  background-color: var(--primario);
   padding: 15px 30px;
-  border-bottom: 3px solid #ffd700; 
+  border-bottom: 3px solid var(--secundario);
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
 body.modo-oscuro header {
-  background-color: #1a1a1a;
-  border-bottom: 3px solid #e03e00; 
+  background-color: #23353b;
+  border-bottom: 3px solid var(--secundario-oscuro);
 }
 
 .barra-navegacion {
@@ -54,8 +57,8 @@ body.modo-oscuro header {
 
 .badge-esencia {
   font-size: 14px;
-  background-color: #e03e00; 
-  color: #ffffff;
+  background-color: var(--secundario);
+  color: #234b58;
   padding: 2px 6px;
   border-radius: 4px;
   margin-left: 8px;
@@ -81,13 +84,13 @@ body.modo-oscuro .enlaces a {
 }
 
 .enlaces a:hover {
-  color: #ffd700; /* Amarillo Oro */
+  color: var(--secundario);
 }
 
 .botones-derecha button {
-  background-color: #ffffff; /* Blanco */
-  color: #0057b7; /* Azul */
-  border: 2px solid #ffd700; /* Oro */
+  background-color: var(--superficie);
+  color: var(--primario);
+  border: 2px solid var(--secundario);
   border-radius: 5px;
   padding: 5px 12px;
   cursor: pointer;
@@ -96,9 +99,9 @@ body.modo-oscuro .enlaces a {
 }
 
 body.modo-oscuro .botones-derecha button {
-  background-color: #333333;
-  color: #f5f5f5;
-  border-color: #e03e00; 
+  background-color: #2f444b;
+  color: var(--texto-claro);
+  border-color: var(--secundario);
 }
 
 /* Estilos de las secciones con fondos combinados */
@@ -108,21 +111,21 @@ section {
 }
 
 .seccion-blanca {
-  background-color: #ffffff;
+  background-color: var(--superficie);
 }
 
 body.modo-oscuro .seccion-blanca {
-  background-color: #222222;
+  background-color: #2a3438;
 }
 
 .seccion-azul-saiyayin {
-  background-color: #0057b7; 
+  background-color: var(--primario);
   color: #ffffff;
 }
 
 body.modo-oscuro .seccion-azul-saiyayin {
-  background-color: #1a1a1a;
-  border-top: 1px solid #e03e00;
+  background-color: #2a3438;
+  border-top: 1px solid var(--secundario);
 }
 
 .seccion-azul-saiyayin h2 {
@@ -130,7 +133,7 @@ body.modo-oscuro .seccion-azul-saiyayin {
 }
 
 h1, h2 {
-  color: #0057b7; 
+  color: var(--primario);
   margin-bottom: 20px;
 }
 
@@ -140,17 +143,17 @@ h1, h2 {
   justify-content: center;
   align-items: center;
   padding: 80px 20px;
-  background-color: #ffffff;
+  background-color: var(--superficie);
 }
 
 body.modo-oscuro .seccion-presentacion {
-  background-color: #222222;
+  background-color: #2a3438;
 }
 
 .esencia-dialogo {
   font-size: 18px;
   font-style: italic;
-  color: #e03e00; 
+  color: var(--secundario-oscuro);
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -158,16 +161,26 @@ body.modo-oscuro .seccion-presentacion {
 .saludo {
   font-size: 20px;
   font-weight: bold;
-  color: #ffd700; 
+  color: var(--primario);
 }
 
-.foto-presentacion img {
+.foto-presentacion {
+  margin-left: 40px;
+}
+
+.foto-presentacion .avatar-simbolo {
   width: 220px;
   height: 220px;
   border-radius: 50%;
-  border: 6px solid #e03e00; 
-  box-shadow: 0 0 15px rgba(224, 62, 0, 0.5); 
-  margin-left: 40px;
+  border: 6px solid var(--secundario);
+  background: linear-gradient(135deg, var(--primario), #2c6b7d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 88px;
+  font-weight: 700;
+  color: #ffffff;
+  box-shadow: 0 0 18px rgba(68, 139, 171, 0.25);
 }
 
 /* Habilidades (Flip Cards) */
@@ -178,12 +191,30 @@ body.modo-oscuro .seccion-presentacion {
   margin-top: 30px;
 }
 
-.foto-laboratorio img {
-  width: 220px;
-  border-radius: 10px;
-  border: 4px solid #0057b7; 
+.foto-laboratorio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.foto-laboratorio .bloque-lab {
+  width: 220px;
+  height: 150px;
+  border-radius: 16px;
+  border: 4px solid var(--primario);
+  background: linear-gradient(135deg, var(--primario), var(--secundario));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 46px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.foto-laboratorio p {
+  margin-top: 12px;
+  font-weight: 600;
+}
 .tarjetas {
   display: flex;
   margin-left: 40px;
@@ -225,27 +256,27 @@ body.modo-oscuro .seccion-presentacion {
 
 .frente {
   background-color: #ffffff;
-  color: #333333;
+  color: #234b58;
 }
 
 .border-azul {
-  border: 2px solid #0057b7; /* Azul Vegeta */
+  border: 2px solid var(--primario);
 }
 
 body.modo-oscuro .frente {
-  background-color: #333333;
+  background-color: #2f444b;
   color: #ffffff;
-  border-color: #e03e00; /* Naranja */
+  border-color: var(--secundario);
 }
 
 .atras {
-  background-color: #0057b7; 
+  background-color: var(--primario);
   color: white;
-  transform: rotateY(180deg); /* Ya esta girada 180 grados */
+  transform: rotateY(180deg);
 }
 
 .bg-naranja-saiyayin {
-  background-color: #e03e00; 
+  background-color: var(--secundario);
 }
 
 /* Blog */
@@ -256,8 +287,8 @@ body.modo-oscuro .frente {
 
 .articulo {
   background-color: #ffffff;
-  color: #333333;
-  border: 2px solid #ffd700; /* Oro */
+  color: #234b58;
+  border: 2px solid var(--secundario);
   border-radius: 10px;
   padding: 20px;
   margin: 10px;
@@ -266,13 +297,13 @@ body.modo-oscuro .frente {
 }
 
 body.modo-oscuro .articulo {
-  background-color: #333333;
+  background-color: #2f444b;
   color: #ffffff;
-  border-color: #e03e00; /* Naranja */
+  border-color: var(--secundario-oscuro);
 }
 
 .articulo h3 {
-  color: #0057b7; /* Azul */
+  color: var(--primario);
 }
 
 /* Juego Tres en Línea */
@@ -287,8 +318,8 @@ body.modo-oscuro .articulo {
 .casilla {
   width: 110px;
   height: 110px;
-  background-color: #eeeeee;
-  border: 3px solid #0057b7; /* Azul */
+  background-color: #f3f6f7;
+  border: 3px solid var(--primario);
   font-size: 60px;
   font-weight: bold;
   display: flex;
@@ -298,16 +329,16 @@ body.modo-oscuro .articulo {
 }
 
 body.modo-oscuro .casilla {
-  background-color: #333333;
-  border-color: #555555;
+  background-color: #31464c;
+  border-color: #6b9aab;
 }
 
 .casilla.x {
-  color: #ffd700; 
+  color: var(--secundario);
 }
 
 .casilla.o {
-  color: #e03e00; 
+  color: #2b6f7d;
 }
 
 .marcador {
@@ -317,7 +348,7 @@ body.modo-oscuro .casilla {
 }
 
 .boton-azul-saiyayin {
-  background-color: #0057b7; /* Azul */
+  background-color: var(--primario);
   color: white;
   padding: 10px 20px;
   border: none;
@@ -327,7 +358,7 @@ body.modo-oscuro .casilla {
 }
 
 .boton-azul-saiyayin:hover {
-  background-color: #004696;
+  background-color: #2d6f84;
 }
 
 /* Formulario */
@@ -345,18 +376,18 @@ body.modo-oscuro .casilla {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  color: #0057b7; /* Azul */
+  color: var(--primario);
 }
 
 .grupo-formulario input, .grupo-formulario textarea {
   width: 100%;
   padding: 10px;
-  border: 2px solid #0057b7; /* Azul */
+  border: 2px solid var(--primario);
   border-radius: 5px;
 }
 
 .boton-enviar {
-  background-color: #0057b7; /* Azul */
+  background-color: var(--primario);
   color: white;
   padding: 10px 20px;
   border: none;
@@ -367,24 +398,25 @@ body.modo-oscuro .casilla {
 }
 
 .boton-naranja-saiyayin {
-  background-color: #e03e00; /* Naranja Saiyayin */
+  background-color: var(--secundario);
+  color: #234b58;
 }
 
 .boton-naranja-saiyayin:hover {
-  background-color: #c03500;
+  background-color: var(--secundario-oscuro);
 }
 
 /* Footer */
 footer {
-  background-color: #1a1a1a;
+  background-color: #23353b;
   color: white;
   text-align: center;
   padding: 25px;
-  border-top: 3px solid #e03e00; /* Naranja Saiyayin */
+  border-top: 3px solid var(--secundario);
 }
 
 .esencia-footer {
-  color: #ffd700; /* Oro Esencia */
+  color: var(--secundario);
   margin-left: 10px;
   font-style: italic;
 }
@@ -408,7 +440,7 @@ footer {
   .seccion-presentacion {
     flex-direction: column;
   }
-  .foto-presentacion img {
+  .foto-presentacion {
     margin-left: 0;
     margin-top: 20px;
   }
